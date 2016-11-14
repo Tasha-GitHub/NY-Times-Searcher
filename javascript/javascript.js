@@ -43,7 +43,7 @@ $("#submitButton").on("click", function(event){
 			}).done(function(result) {
 				console.log(result);
 			  for(var i = 0 ; i <= articleNumber; i++){
-			  	$("#topArticles").append("<div>"+result.response.docs[i].headline.main+"</div>");
+			  	$("#topArticles").append("<div>"+result.response.docs[i].headline.main+ "<p>" + "URL: "+ result.response.docs[i].web_url+"</p>" + "</div>");
 		  		}
 			});
 		// } 
