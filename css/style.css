@@ -1,0 +1,21 @@
+h1 {
+	text-align: center;
+}
+
+h6 {
+	background-color: yellow;
+}
+
+.jumbotron {
+	background-color: blue;
+	color: white;
+}
+
+.form-group {
+	width: 50%;
+}
+
+.sectionGroup {
+	border: 5px solid darkblue;
+}
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NY Times Search</title>
+    <meta charset="utf-8">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.css">
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <aside class="col-xs-2"></aside>
+            <header class="jumbotron col-xs-8">
+                <h1><span class="fa fa-newspaper-o"></span> New York Times Search</h1>
+            </header>
+            <aside class="col-xs-2"></aside>
+        </div>
+        <br>
+        <div class="row">
+            <aside class="col-xs-2"></aside>
+            <section class="col-xs-8 sectionGroup">
+                <section>
+                        <h6><span class="fa fa-search"></span> Search Parameters</h6>
+                    <br>
+                    <form>
+                        <div class="form-group">
+                            <label for="searchInput">Search Terms</label>
+                            <input type="text" class="form-control" id="searchInput" placeholder="search input">
+                        </div>
+                        <div class="form-group">
+                            <label for="resultsInput">Number of Results to Retrieve</label>
+                            <input type="text" class="form-control" id="resultsInput" placeholder="results input">
+                        </div>
+                        <div class="form-group">
+                            <label for="startYearInput">Start Year(optional)</label>
+                            <input type="text" class="form-control" id="startYearInput" placeholder="start year input">
+                        </div>
+                        <div class="form-group">
+                            <label for="endYearInput">End Year(optional)</label>
+                            <input type="text" class="form-control" id="endYearInput" placeholder="end year input">
+                        </div>
+                        <button class="btn btn-success"><span class="fa fa-search"></span> Search </button>
+                        <button class="btn btn-success"><span class="fa fa-trash"></span> Clear Results </button>
+                        <br>
+                    </form>
+                </section>
+            </section>
+            <aside class="col-xs-2"></aside>
+        </div>
+        <br>
+        <div class="row">
+            <aside class="col-xs-2"></aside>
+                <section class="col-xs-8 sectionGroup">
+                    <h6><span class="fa fa-calendar"></span> Top Articles</h6>
+                </section>
+            <br>
+            <section id="topArticles"></section>
+            <aside class="col-xs-2"></aside>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/javascript.js"></script>
+</body>
+
+</html>
