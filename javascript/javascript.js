@@ -11,9 +11,9 @@ var url;
 $("#submitButton").on("click", function(event){
 	event.preventDefault();
 	
+	startYear  = $("#startYearInput").val();
 
-
-		if(startYear.length == 0){
+		if(startYear.length == 0 || endYear == 0){
 			console.log("blank");
 			article  = $("#searchInput").val();
 			startYear = "19500101";
@@ -37,13 +37,13 @@ $("#submitButton").on("click", function(event){
 		// console.log(startYear);
 
 		// try {
-		    	$.ajax({
+		    $.ajax({
 			  url: url,
 			  method: 'GET',
 			}).done(function(result) {
 				console.log(result);
 			  for(var i = 0 ; i <= articleNumber; i++){
-			  	$("#topArticles").append("<div>"+result.response.docs[i].abstract+"</div>");
+			  	$("#topArticles").append("<div>"+result.response.docs[i].headline.main+"</div>");
 		  		}
 			});
 		// } 
