@@ -24,36 +24,43 @@
         <br>
         <div class="row">
             <aside class="col-xs-2"></aside>
-            <section>
-                <h4><span class="fa fa-search"></span> Search Parameters</h4>
-                <form>
-                    <div class="form-group">
-                        <label for="searchInput">Search Terms</label>
-                        <input type="text" class="form-control" id="searchInput" placeholder="search input">
-                    </div>
-                    <div class="form-group">
-                        <label for="resultsInput">Number of Results to Retrieve</label>
-                        <input type="text" class="form-control" id="resultsInput" placeholder="results input">
-                    </div>
-                    <div class="form-group">
-                        <label for="startYearInput">Start Year(optional)</label>
-                        <input type="text" class="form-control" id="startYearInput" placeholder="start year input">
-                    </div>
-                    <div class="form-group">
-                        <label for="endYearInput">End Year(optional)</label>
-                        <input type="text" class="form-control" id="endYearInput" placeholder="end year input">
-                    </div>
-                    <button class="btn btn-success"><span class="fa fa-search"></span> Search
-                        <button class="btn btn-success"><span class="fa fa-map"></span> Clear Results
-                            <br>
-                </form>
+            <section class="col-xs-8 sectionGroup">
+                <section>
+                        <h6><span class="fa fa-search"></span> Search Parameters</h6>
+                    <br>
+                    <form>
+                        <div class="form-group">
+                            <label for="searchInput">Search Terms</label>
+                            <input type="text" class="form-control" id="searchInput" placeholder="search input">
+                        </div>
+                        <div class="form-group">
+                            <label for="resultsInput">Number of Results to Retrieve</label>
+                            <input type="text" class="form-control" id="resultsInput" placeholder="results input">
+                        </div>
+                        <div class="form-group">
+                            <label for="startYearInput">Start Year(optional)</label>
+                            <input type="text" class="form-control" id="startYearInput" placeholder="start year input">
+                        </div>
+                        <div class="form-group">
+                            <label for="endYearInput">End Year(optional)</label>
+                            <input type="text" class="form-control" id="endYearInput" placeholder="end year input">
+                        </div>
+                        <button class="btn btn-success"><span class="fa fa-search"></span> Search </button>
+                        <button class="btn btn-success"><span class="fa fa-trash"></span> Clear Results </button>
+                        <br>
+                    </form>
+                </section>
             </section>
             <aside class="col-xs-2"></aside>
         </div>
+        <br>
         <div class="row">
             <aside class="col-xs-2"></aside>
-            <section class="col-xs-8">
-            </section>
+                <section class="col-xs-8 sectionGroup">
+                    <h6><span class="fa fa-calendar"></span> Top Articles</h6>
+                </section>
+            <br>
+            <section id="topArticles"></section>
             <aside class="col-xs-2"></aside>
         </div>
     </div>
