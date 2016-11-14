@@ -5,45 +5,88 @@ var startYear = "19500101";
 var articleNumber= "5";
 var endYear = "20160101";
 var key = "3283107effc84af7965500f03014c457";
+var url;
 
 
 $("#submitButton").on("click", function(event){
 	event.preventDefault();
-	article  = $("#searchInput").val();
-	//startYear  = $("#startYear").val();
-	//endYear  = $("#endYear").val();
-	console.log(article);
+	
 
-	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + article +"&begin_date="+ startYear +"&end_date="+endYear+"&fq="+ articleNumber + "&api-key=" + key;
-	console.log(articleNumber.length)
 
-	$.ajax({
-	  url: url,
-	  method: 'GET',
-	}).done(function(result) {
-		console.log(result);
-	  for(var i = 0 ; i <= articleNumber; i++){
-	  	$("#topArticles").append("<div>"+result.response.docs[i].abstract+"</div>");
-  		}
-	}).fail(function(){
-		console.log("this has failed");
+		if(startYear.length == 0){
+			console.log("blank");
+			article  = $("#searchInput").val();
+			startYear = "19500101";
+			articleNumber= "5";
+	 		endYear = "20160101";
 
-		// startYear = "19500101";
-		// articleNumber= "5";
-		// endYear = "20160101";
-		
-		// var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + article +"&begin_date="+ startYear +"&end_date="+ endYear+"&fq="+ articleNumber + "&api-key=" + key;
-		
-		// $.ajax({
-		//   	url: queryURL,
-		//   	method: 'GET',
-		// }).done(function(result) {
-		// console.log(result);
-	 //  for(var i = 0 ; i <= articleNumber; i++){
-	 //  	$(".whereArticlesLive").append("<div>"+result.response.docs[i].abstract+"</div>");
-  // 		}
-  	// });
+			url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + article +"&begin_date="+ startYear +"&end_date="+endYear+"&fq="+ articleNumber + "&api-key=" + key;
+			console.log(startYear.length)
 
-	});
+		} else{
+			console.log("not blank")
+			article  = $("#searchInput").val();
+			startYear  = $("#startYearInput").val();
+			articleNumber= "5";
+			endYear  = $("#endYearInput").val();
+			console.log(article);
+
+			url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + article +"&begin_date="+ startYear +"&end_date="+endYear+"&fq="+ articleNumber + "&api-key=" + key;
+			console.log(startYear.length)
+		}
+		// console.log(startYear);
+
+		// try {
+		    	$.ajax({
+			  url: url,
+			  method: 'GET',
+			}).done(function(result) {
+				console.log(result);
+			  for(var i = 0 ; i <= articleNumber; i++){
+			  	$("#topArticles").append("<div>"+result.response.docs[i].abstract+"</div>");
+		  		}
+			});
+		// } 
+		// catch(err) {
+		// 	startYear  = "19500101";
+		// 	endYear = "20160101";
+			
+		// 	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + article +"&begin_date="+ startYear +"&end_date="+endYear+"&fq="+ articleNumber + "&api-key=" + key;
+		// 	console.log(articleNumber.length)
+
+
+		// 	$.ajax({
+		// 	  url: url,
+		// 	  method: 'GET',
+		// 	}).done(function(result) {
+		// 		console.log(result);
+		// 	  for(var i = 0 ; i <= articleNumber; i++){
+		// 	  	$("#topArticles").append("<div>"+result.response.docs[i].abstract+"</div>");
+		//   		}
+		// 	}).fail(function(){
+		// 		console.log("this has failed");
+
+		// 		// startYear = "19500101";
+		// 		// articleNumber= "5";
+		// 		// endYear = "20160101";
+				
+		// 		// var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + article +"&begin_date="+ startYear +"&end_date="+ endYear+"&fq="+ articleNumber + "&api-key=" + key;
+				
+		// 		// $.ajax({
+		// 		//   	url: queryURL,
+		// 		//   	method: 'GET',
+		// 		// }).done(function(result) {
+		// 		// console.log(result);
+		// 	 //  for(var i = 0 ; i <= articleNumber; i++){
+		// 	 //  	$(".whereArticlesLive").append("<div>"+result.response.docs[i].abstract+"</div>");
+		//   	// 		}
+		//   	// });
+
+		// 	});
+
+
+  //  	 		}
+
+	
 
 })
