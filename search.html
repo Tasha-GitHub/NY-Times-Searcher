@@ -7,7 +7,9 @@
     <!-- fontawesome -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <!-- custom css -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -26,16 +28,22 @@
             <aside class="col-xs-2"></aside>
             <section class="col-xs-8 sectionGroup">
                 <section>
-                        <h6><span class="fa fa-search"></span> Search Parameters</h6>
+                    <h6><span class="fa fa-search"></span> Search Parameters</h6>
                     <br>
                     <form>
                         <div class="form-group">
                             <label for="searchInput">Search Terms</label>
                             <input type="text" class="form-control" id="searchInput" placeholder="search input">
                         </div>
-                        <div class="form-group">
-                            <label for="resultsInput">Number of Results to Retrieve</label>
-                            <input type="text" class="form-control" id="resultsInput" placeholder="results input">
+                        <div class="form-group dropdown">
+                            <button class="btn btn-default dropdown-toggle btn-block" type="button" id="menu1" data-toggle="dropdown">Number of Results to Retrieve<span class="caret" aria-haspopup="true" aria-expanded="false"></span></button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">1</a></li>
+                                <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">2</a></li>
+                                <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">3</a></li>
+                                <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">4</a></li>
+                                <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">5</a></li>
+                            </ul>
                         </div>
                         <div class="form-group">
                             <label for="startYearInput">Start Year(optional)</label>
@@ -56,15 +64,17 @@
         <br>
         <div class="row">
             <aside class="col-xs-2"></aside>
-                <section class="col-xs-8 sectionGroup">
-                    <h6><span class="fa fa-calendar"></span> Top Articles</h6>
-                </section>
-            <br>
+            <section class="col-xs-8 sectionGroup">
+                <h6><span class="fa fa-calendar"></span> Top Articles</h6>
+                <hr>
+            </section>
             <section id="topArticles"></section>
             <aside class="col-xs-2"></aside>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="javascript/javascript.js"></script>
 </body>
 
