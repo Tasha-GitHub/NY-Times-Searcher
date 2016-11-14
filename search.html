@@ -1,19 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>NY Times Search</title>
-	<meta charset="utf-8">
-	<!-- bootstrap -->
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.css">
-</head>
-<body>
-	<div class="container">
-		<header class="jumbotron">
-			<h1>Hello</h1>
-		</header>
-	</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="javascript/javascript.js"></script>
+<head>
+    <title>NY Times Search</title>
+    <meta charset="utf-8">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.css">
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <aside class="col-xs-2"></aside>
+            <header class="jumbotron col-xs-8">
+                <h1><span class="fa fa-newspaper-o"></span> New York Times Search</h1>
+            </header>
+            <aside class="col-xs-2"></aside>
+        </div>
+        <br>
+        <div class="row">
+            <aside class="col-xs-2"></aside>
+            <section>
+                <h4><span class="fa fa-search"></span> Search Parameters</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="searchInput">Search Terms</label>
+                        <input type="text" class="form-control" id="searchInput" placeholder="search input">
+                    </div>
+                    <div class="form-group">
+                        <label for="resultsInput">Number of Results to Retrieve</label>
+                        <input type="text" class="form-control" id="resultsInput" placeholder="results input">
+                    </div>
+                    <div class="form-group">
+                        <label for="startYearInput">Start Year(optional)</label>
+                        <input type="text" class="form-control" id="startYearInput" placeholder="start year input">
+                    </div>
+                    <div class="form-group">
+                        <label for="endYearInput">End Year(optional)</label>
+                        <input type="text" class="form-control" id="endYearInput" placeholder="end year input">
+                    </div>
+                    <button class="btn btn-success"><span class="fa fa-search"></span> Search
+                        <button class="btn btn-success"><span class="fa fa-map"></span> Clear Results
+                            <br>
+                </form>
+            </section>
+            <aside class="col-xs-2"></aside>
+        </div>
+        <div class="row">
+            <aside class="col-xs-2"></aside>
+            <section class="col-xs-8">
+            </section>
+            <aside class="col-xs-2"></aside>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/javascript.js"></script>
 </body>
+
 </html>

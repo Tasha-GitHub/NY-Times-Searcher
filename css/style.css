@@ -1,0 +1,12 @@
+h1 {
+	text-align: center;
+}
+
+.jumbotron {
+	background-color: blue;
+	color: white;
+}
+
+.form-group {
+	width: 50%;
+}
