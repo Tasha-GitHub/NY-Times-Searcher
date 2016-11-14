@@ -1,14 +1,18 @@
 h1 {
+	font-size: 48px;
 	text-align: center;
+	color: white;
+	line-height: 165px;
+}
+
+#heading {
+	background-color: darkblue;
+	height: 200px;
+
 }
 
 h6 {
-	background-color: yellow;
-}
-
-.jumbotron {
-	background-color: blue;
-	color: white;
+	font-size: 22px;
 }
 
 .sectionGroup {
@@ -24,5 +28,10 @@ hr {
 
 .btn-block {
 	text-align: left;
+}
+
+.formHeader {
+	background-color: darkblue;
+	color: white;
 }
 

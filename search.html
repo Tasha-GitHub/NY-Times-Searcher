@@ -7,9 +7,7 @@
     <!-- fontawesome -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- bootstrap -->
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
     <!-- custom css -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -18,7 +16,7 @@
     <div class="container">
         <div class="row">
             <aside class="col-xs-2"></aside>
-            <header class="jumbotron col-xs-8">
+            <header id="heading" class="col-xs-8">
                 <h1><span class="fa fa-newspaper-o"></span> New York Times Search</h1>
             </header>
             <aside class="col-xs-2"></aside>
@@ -26,54 +24,67 @@
         <br>
         <div class="row">
             <aside class="col-xs-2"></aside>
+            <section class="col-xs-8 sectionGroup formHeader">
+                <h6><span class="fa fa-search"></span> Search Parameters</h6>
+            </section>
+            <aside class="col-xs-2"></aside>
+        </div>
+        <div class="row">
+            <aside class="col-xs-2"></aside>
             <section class="col-xs-8 sectionGroup">
-                <section>
-                    <h6><span class="fa fa-search"></span> Search Parameters</h6>
+                <br>
+                <form>
+                    <div class="form-group">
+                        <label for="searchInput">Search Terms</label>
+                        <input type="text" class="form-control" id="searchInput" placeholder="search input">
+                    </div>
+                    <div class="form-group dropdown">
+                        <button class="btn btn-default dropdown-toggle btn-block" type="button" id="menu1" data-toggle="dropdown">Number of Results to Retrieve<span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                            <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">1</a></li>
+                            <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">2</a></li>
+                            <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">3</a></li>
+                            <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">4</a></li>
+                            <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">5</a></li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <label for="startYearInput">Start Year(optional)</label>
+                        <input type="text" class="form-control" id="startYearInput" placeholder="start year input">
+                    </div>
+                    <div class="form-group">
+                        <label for="endYearInput">End Year(optional)</label>
+                        <input type="text" class="form-control" id="endYearInput" placeholder="end year input">
+                    </div>
+                    <button id="submitButton" class="btn btn-success"><span class="fa fa-search"></span> Search </button>
+                    <button class="btn btn-success"><span class="fa fa-trash"></span> Clear Results </button>
                     <br>
-                    <form>
-                        <div class="form-group">
-                            <label for="searchInput">Search Terms</label>
-                            <input type="text" class="form-control" id="searchInput" placeholder="search input">
-                        </div>
-                        <div class="form-group dropdown">
-                            <button class="btn btn-default dropdown-toggle btn-block" type="button" id="menu1" data-toggle="dropdown">Number of Results to Retrieve<span class="caret" aria-haspopup="true" aria-expanded="false"></span></button>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                                <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">1</a></li>
-                                <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">2</a></li>
-                                <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">3</a></li>
-                                <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">4</a></li>
-                                <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">5</a></li>
-                            </ul>
-                        </div>
-                        <div class="form-group">
-                            <label for="startYearInput">Start Year(optional)</label>
-                            <input type="text" class="form-control" id="startYearInput" placeholder="start year input">
-                        </div>
-                        <div class="form-group">
-                            <label for="endYearInput">End Year(optional)</label>
-                            <input type="text" class="form-control" id="endYearInput" placeholder="end year input">
-                        </div>
-                        <button id = "submitButton"class="btn btn-success"><span class="fa fa-search"></span> Search </button>
-                        <button class="btn btn-success"><span class="fa fa-trash"></span> Clear Results </button>
-                        <br>
-                    </form>
-                </section>
+                </form>
             </section>
             <aside class="col-xs-2"></aside>
         </div>
         <br>
         <div class="row">
             <aside class="col-xs-2"></aside>
-            <section class="col-xs-8 sectionGroup">
+            <section class="col-xs-8 formHeader">
                 <h6><span class="fa fa-calendar"></span> Top Articles</h6>
-                <hr>
             </section>
-            <section id="topArticles"></section>
+            <aside class="col-xs-2"></aside>
+        </div>
+        <div class="row">
+            <aside class="col-xs-2"></aside>
+            <section class="col-xs-8 sectionGroup">
+                <div class="formHeader">
+                </div>
+                <hr>
+                <section id="topArticles"></section>
+            </section>
             <aside class="col-xs-2"></aside>
         </div>
     </div>
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <!-- Latest compiled and minified JavaScript -->
+    <!-- bootstrap js -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="javascript/javascript.js"></script>
 </body>
